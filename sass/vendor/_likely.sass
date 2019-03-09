@@ -1,0 +1,98 @@
+.likely
+  min-height: 30px
+  font-size: 0
+  opacity: 0
+
+  &_visible
+    opacity: 1
+    transition: opacity $trans-faster
+
+  &__widget
+    width: 30px
+    cursor: pointer
+
+  &__icon
+    height: 30px
+    display: block
+
+    &_vkontakte:hover path
+      fill: #45668e
+
+    &_facebook:hover path
+      fill: #3b5998
+
+    &_odnoklassniki:hover path
+      fill: #e07e3e
+
+    &_twitter:hover path
+      fill: #00aced
+
+    & path
+      fill: #232323
+      transition: fill $trans-fastest
+
+  &__counter
+    display: none
+
+  &--menu
+    margin-top: 50px
+
+  &--menu .likely__icon path
+    fill: white
+
+
+.likely--hor
+  vertical-align: middle
+  display: inline-block
+
+  & .likely__widget
+    margin: 0 2px
+    vertical-align: top
+    display: inline-block
+
+
+.likely--invert
+  width: 200px
+  text-align: right
+  margin: -3px -5px 0 0
+  float: right
+
+
+  & path
+    fill: $color-brand-cnt
+
+  & .likely__icon:hover path
+    fill: white
+
+.likely--aside
+  margin-top: -30px
+  position: fixed
+  top: 50%
+  right: 10px
+
+  & path
+    fill: $color-brand-cnt
+
+  & .likely__icon:hover path
+    fill: white
+
+
+.likely--header
+  margin-top: -14px
+  margin-right: -7px
+  position: absolute
+  top: 50%
+  right: $space-4
+  z-index: 1
+
+  & path
+    fill: #999
+
+
+.likely-wrapper
+  text-align: center
+
+  &--article
+    margin: 70px 0
+
+

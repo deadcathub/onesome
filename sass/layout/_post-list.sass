@@ -1,0 +1,71 @@
+.l-post-row
+  font-size: 0
+  margin-right: -30px
+
+  &_item
+    width: 25%
+    padding-right: 150px
+    vertical-align: top
+    display: inline-block
+
+
+
+.l-post-col
+  max-width: 1800px
+  margin-left: auto
+  margin-right: auto
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+
+  // &:after
+    // content: ""
+    // flex: auto
+
+  &_item
+    padding-bottom: 120px
+    flex: 0 0 790px
+
+    &:nth-child(odd)
+      padding-left: 60px
+      padding-right: 30px
+
+      @media only screen and (max-width: 1579px)
+        padding-right: 60px
+        flex: 0 0 820px
+
+    &:nth-child(even)
+      padding-left: 30px
+      padding-right: 60px
+
+      @media only screen and (max-width: 1579px)
+        padding-left: 60px
+        flex: 0 0 820px
+
+
+.b-post-header
+  margin-bottom: 38px
+  align-items: baseline
+  justify-content: space-between
+  display: flex
+
+  &_title
+    font-size: $font-stack-bold-4-fs
+    font-weight: $font-stack-bold-4-fw
+    margin-top: 0
+    margin-bottom: 0
+
+  &_link
+    font-size: $font-stack-medium-2-fs
+    line-height: $font-stack-medium-2-lh-m
+    font-weight: $font-stack-medium-2-fw
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+.index
+  border: 0
+
+  &_main
+    max-width: $width-cnt
+    margin-top: 60px
+    margin-bottom: 90px
+
+    @media only screen and (max-width: $width-cnt)
+      max-width: $width-cnt-2 + $space-4
+      margin-top: 30px
+      margin-bottom: 60px
+
+    @media only screen and (max-width: $width-cnt-2 + $space-4)
+      max-width: 500px
+
+  &_post-list
+    margin-top: 100px
+    margin-bottom: 200px
+
+  &_day
+    max-width: calc(100% - #{$width-cnt-2} - 80px)
+    margin-top: -3px
+    float: right
+
+    @media only screen and (max-width: $width-cnt)
+      max-width: 700px
+      margin-top: 0
+      margin-bottom: 50px
+      float: none
+
+    & .b-day_day
+
+      @media only screen and (max-width: $width-cnt)
+        padding-left: 30px
+
+
+
+
+

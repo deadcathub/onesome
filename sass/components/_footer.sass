@@ -1,0 +1,44 @@
+.footer
+  min-height: 60px
+  font-size: 0
+  padding: 30px $space-4 28px
+
+  @media only screen and (max-width: 900px)
+    padding-left: 30px
+    padding-right: 30px
+
+  @media only screen and (max-width: 760px)
+    padding-left: 20px
+    padding-right: 20px
+
+  @media only screen and (max-width: 400px)
+    padding-left: 15px
+    padding-right: 15px
+
+  .post-wrapper + &
+    margin-top: 0
+
+  .seo-block-wrapper + &
+    margin-top: 0
+
+  &_content
+    max-width: none
+
+  &_info
+    font-size: $font-stack-fs
+    line-height: $font-stack-lh-l
+    margin-top: 0
+    margin-bottom: 0
+
+    & .last
+      margin-right: 7px
+
+
+.copyright
+  white-space: nowrap
+  float: right
+
+  @include breakpoint(huge)
+    float: none
+
+

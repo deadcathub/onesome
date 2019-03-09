@@ -1,0 +1,40 @@
+.seo-wrapper
+  background: white url("http://erock.ru/wp-content/themes/erock/images/sign.svg") center -70px no-repeat
+  background-size: contain
+  padding-top: 100px
+  padding-bottom: 120px
+
+.seo-title
+  font-size: $font-stack-bold-5-fs
+  line-height: $font-stack-bold-5-lh-l
+  font-weight: $font-stack-bold-5-fw
+  color: $color-black-light
+  margin-top: 0
+  margin-bottom: 30px
+
+.seo
+  font-size: 0
+  margin-right: - $space-4
+
+  @include breakpoint(larger)
+    margin-right: 0
+
+  &_item
+    width: 50%
+    padding-right: $space-4
+    vertical-align: top
+    display: inline-block
+
+    @include breakpoint(larger)
+      width: 100%
+      padding-right: 0
+
+  &_text
+    font-size: $font-stack-3-fs
+    line-height: $font-stack-3-lh-l
+    margin-top: 0
+    margin-bottom: 10px
+
+    @include breakpoint(small)
+      font-size: $font-stack-2-fs
+      line-height: $font-stack-2-lh-l

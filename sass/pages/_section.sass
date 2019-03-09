@@ -1,0 +1,77 @@
+.page, .category
+  background-color: $color-brand-3
+
+
+.page-header
+  margin: 50px 0
+
+  @include breakpoint(tiny)
+    text-align: center
+    padding: 20px 0
+
+
+.page-header-inner
+  width: 740px
+  margin: auto
+
+
+.page-title
+  font-size: $font-stack-bold-6-fs
+  line-height: $font-stack-bold-6-lh-m
+  font-weight: $font-stack-bold-6-fw
+  color: #232323
+  margin: 8px 0 0
+  display: inline-block
+
+  @include breakpoint(tiny)
+    padding: 0
+    margin: 0
+
+
+.b-counter
+  font-size: $font-stack-2-fs
+  color: #6f6f6f
+  margin-left: 20px
+
+
+.page_intro
+  max-width: calc(100% - #{$width-cnt-2} - 80px)
+  margin-top: 2px
+  float: right
+
+  @include breakpoint(tiny)
+    display: none
+
+.b-intro
+
+  &_text
+    font-size: $font-stack-2-fs
+    line-height: $font-stack-2-lh-s
+    margin-top: 0
+
+  &_popular
+    margin-top: 30px
+
+.b-popular
+  font-size: $font-stack-2-fs
+  line-height: $font-stack-2-lh-s
+  
+  &_item
+    margin-right: 7px
+    display: inline-block
+
+    &--label
+      margin-bottom: 10px
+      display: block
+
+  &_link
+    font-size: $font-stack-medium-2-fs
+    font-weight: $font-stack-medium-2-fw
+
+
+
+
+
+
+
+

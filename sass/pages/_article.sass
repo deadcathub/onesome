@@ -1,0 +1,373 @@
+$content-shift: 200px
+
+.article
+  background-color: white
+  background-position: center top
+  background-repeat: no-repeat
+  padding: 0 $space-4 50px
+  margin-left: $space-2
+  margin-right: $space-2
+
+  @media only screen and (max-width: 900px)
+    padding-left: $space-3
+    padding-right: $space-3
+
+  @media only screen and (max-width: 760px)
+    padding-left: $space-2
+    padding-right: $space-2
+
+  @media only screen and (max-width: 400px)
+    padding-left: $space-2
+    padding-right: $space-2
+
+  & p:not([class])
+    max-width: $art-cnt-width
+    font-size: $font-stack-3-fs
+    line-height: $font-stack-3-lh-l
+    padding-right: $content-shift
+    margin: 1em auto
+
+    @media only screen and (max-width: 900px)
+      padding-right: 0
+
+    @media only screen and (max-width: 400px)
+      font-size: $font-stack-2-fs
+      line-height: $font-stack-2-lh-l
+
+  & > h2:not([class])
+    max-width: $art-cnt-width
+    font-size: $font-stack-bold-5-fs
+    line-height: $font-stack-bold-5-lh-m
+    font-weight: $font-stack-bold-5-fw
+    color: $color-black-lighten
+    padding-right: $content-shift
+    margin: 55px auto 30px
+    clear: both
+
+    @media only screen and (max-width: 900px)
+      padding-right: 5%
+
+    @media only screen and (max-width: 760px)
+      margin-top: 50px
+      margin-bottom: 25px
+
+    @media only screen and (max-width: 400px)
+      font-size: $font-stack-bold-3-fs
+      line-height: $font-stack-bold-3-lh-m
+      font-weight: $font-stack-bold-3-fw
+
+  &_more
+    margin-top: 90px
+    margin-bottom: 150px
+
+
+.article-header
+  background-repeat: no-repeat
+  background-position: center
+  padding: 85px $space-4 0
+  margin-left: - $space-4
+  margin-right: - $space-4
+  position: relative
+
+  @media only screen and (max-width: 900px)
+    margin-left: - $space-4
+    margin-right: - $space-4
+    padding-left: $space-4
+    padding-right: $space-4
+
+  @media only screen and (max-width: 760px)
+    margin-left: - $space-2
+    margin-right: - $space-2
+    padding: 70px $space-2 0
+
+  @media only screen and (max-width: 400px)
+    margin-left: - $space-2
+    margin-right: - $space-2
+    padding-left: $space-2
+    padding-right: $space-2
+
+  &--color
+    padding-bottom: 23px
+    margin-bottom: 80px
+
+    @media only screen and (max-width: 760px)
+      margin-bottom: 70px
+
+  &_title
+    max-width: $art-cnt-width
+    font-size: $font-stack-bold-7-fs
+    line-height: $font-stack-bold-7-lh-m
+    font-weight: $font-stack-bold-7-fw
+    color: $color-black-lighten
+    padding-right: 5%
+    margin: 0 auto 55px
+    position: relative
+    z-index: 2
+
+    @media only screen and (max-width: 900px)
+      margin-bottom: 65px
+
+    @media only screen and (max-width: 760px)
+      margin-bottom: 50px
+
+    @media only screen and (max-width: 600px)
+      font-size: $font-stack-bold-5-fs
+      line-height: $font-stack-bold-5-lh-s
+      font-weight: $font-stack-bold-5-fw
+      padding-right: 0
+      margin-bottom: 45px
+
+    @media only screen and (max-width: 400px)
+      font-size: $font-stack-bold-5-fs
+      line-height: $font-stack-bold-5-lh-s
+      font-weight: $font-stack-bold-5-fw
+
+    &--white
+      color: white
+
+  &_meta
+    max-width: $art-cnt-width
+    font-size: 0
+    margin: 0 auto 150px
+
+    @media only screen and (max-width: 760px)
+      margin-bottom: 100px
+      display: block
+
+    @media only screen and (max-width: 600px)
+      margin-bottom: 40px
+
+  &_date
+    font-size: $font-stack-fs
+
+    &--white
+      color: white
+
+.article-lead
+  max-width: $art-cnt-width
+  font-size: $font-stack-5-fs
+  line-height: $font-stack-5-lh-l
+  margin: 0 auto 55px
+
+  @media only screen and (max-width: 760px)
+    font-size: $font-stack-4-fs
+    line-height: $font-stack-4-lh-m
+    margin-bottom: 50px
+
+  @media only screen and (max-width: 600px)
+    margin-bottom: 46px
+
+  @media only screen and (max-width: 400px)
+    font-size: $font-stack-3-fs
+
+  &--white
+    color: white
+
+.question
+  font-weight: 600
+  margin-top: 34px
+
+.pic
+  font-size: 0
+  position: relative
+  display: inline-block
+
+  &:after
+    width: 100%
+    height: 100%
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+
+  &-wrapper
+    max-width: $art-cnt-width-2
+    font-size: 0
+    margin: 75px auto 40px
+    clear: both
+
+    @media only screen and (max-width: 760px)
+      margin: 68px -20px 35px
+
+    @media only screen and (max-width: 400px)
+      margin-left: -15px
+      margin-right: -15px
+
+    & + &
+      margin-top: 35px
+
+  &--light img
+    border: 1px solid #e5e5e5
+
+  &--hor img
+    border: 0
+
+  &_info
+    max-width: 700px
+    font-size: $font-stack-2-fs
+    line-height: $font-stack-2-lh-l
+    margin-top: 25px
+    position: relative
+
+    @media only screen and (max-width: 760px)
+      padding-left: 20px
+      padding-right: 20px
+
+    @media only screen and (max-width: 400px)
+      font-size: $font-stack-fs
+      padding-left: 15px
+      padding-right: 15px
+
+.ref
+  max-width: 250px
+  font-size: 0
+  margin: 12px calc(50% - 620px) 20px 50px
+  position: relative
+  float: right
+
+  @media only screen and (max-width: 1100px)
+    margin-right: 0
+
+  @media only screen and (max-width: 760px)
+    max-width: 400px
+    margin: 62px 0 25px $space-3
+    float: none
+
+  @media only screen and (max-width: 600px)
+    margin-left: 0
+
+  &--figure
+    margin-top: -1px
+
+    @media only screen and (max-width: 760px)
+      margin-top: 40px
+
+  &--center
+    text-align: center
+
+  &_pic
+    max-width: 250px
+
+  &_figure
+    font: 400 74px Alegreya
+    color: #171717
+    white-space: nowrap
+
+    @media only screen and (max-width: 400px)
+      font-size: 40px
+
+  &_ico
+    max-width: 80px
+    border: 1px solid transparent
+    border-radius: 100%
+    margin-bottom: -3px
+    vertical-align: top
+    display: inline-block
+
+    &--light
+      border-color: #e5e5e5
+
+  &_text
+    font-size: $font-stack-2-fs
+    line-height: $font-stack-2-lh-s
+    margin-top: 26px
+
+    @media only screen and (max-width: 400px)
+      font-size: $font-stack-fs
+
+    &--two
+      margin-top: 0
+
+    .ref_figure + &
+      margin-top: 10px
+
+.quote
+  max-width: $art-cnt-width
+  color: $color-black-lighten
+  margin: 70px auto 60px
+  position: relative
+
+  @media only screen and (max-width: 760px)
+    margin: 45px 0 35px $space-3
+
+  @media only screen and (max-width: 600px)
+    margin-left: 0
+
+  @media only screen and (max-width: 400px)
+    margin-left: 0
+
+  &_text
+    font: 43px/1.3 Alegreya, serif
+    margin-top: 0
+    margin-bottom: 0
+    position: relative
+    z-index: 2
+
+    @media only screen and (max-width: 760px)
+      font-size: $font-stack-5-fs
+      line-height: $font-stack-5-lh-m
+
+  &_author
+    font-size: $font-stack-4-fs
+    line-height: $font-stack-4-lh-l
+    margin-top: 35px
+    margin-left: 100px
+    position: relative
+    z-index: 2
+    display: block
+
+    @media only screen and (max-width: 980px)
+      margin-left: 20px
+
+    @media only screen and (max-width: 760px)
+      font-size: $font-stack-2-fs
+      line-height: $font-stack-2-lh-l
+      margin-top: 15px
+      margin-left: 0
+
+    &--light
+      border-color: #e5e5e5
+
+
+.subscribe
+  text-align: center
+  background-color: #efd3b0
+  padding-top: 10px
+  padding-bottom: 10px
+  margin-top: 30px
+
+  &_link
+    color: $color-black
+    display: inline-block
+
+    &:hover
+      color: $color-black
+
+  &_ico
+    max-width: 60px
+    vertical-align: middle
+    display: inline-block
+
+  &_meta
+    text-align: left
+    margin-left: 15px
+    vertical-align: middle
+    display: inline-block
+
+  &_title
+    font-size: $font-stack-bold-2-fs
+    font-weight: $font-stack-bold-2-fw
+    line-height: $font-stack-bold-2-lh-s
+
+  &_text
+    font-size: $font-stack-fs
+    line-height: $font-stack-lh-s
+
+.google
+  visibility: hidden
+  position: absolute
+  pointer-events: none
+
+
+
+

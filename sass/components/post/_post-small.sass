@@ -1,0 +1,59 @@
+.b-post-small
+  position: relative
+  z-index: 1
+  transition: transform $trans-faster ease, box-shadow $trans-faster ease
+
+  &_holder
+    padding-top: 100%
+
+  &_content
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    overflow: hidden
+
+  &_pic
+    width: 100%
+    height: 100%
+    font-size: 0
+    border-radius: 0 0 10px 10px
+    overflow: hidden
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 0
+
+    & img
+      width: 100%
+      position: absolute
+      top: 0
+      left: 0
+
+  &_title
+    font-size: $font-stack-bold-3-fs
+    font-weight: $font-stack-bold-3-fw
+    line-height: $font-stack-bold-3-lh-s
+    color: $color-black-lighten
+    margin-top: 0
+    margin-bottom: 15px
+    position: relative
+
+    &--white
+      color: white
+
+  &_data
+    width: 100%
+    background: linear-gradient(to top, white 10%, transparent)
+    padding: 50px 25px 30px
+    position: absolute
+    left: 0
+    bottom: 0
+
+  &_date
+    font-size: $font-stack-fs
+
+    &--white
+      color: white
+

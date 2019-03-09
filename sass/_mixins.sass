@@ -1,0 +1,78 @@
+
+$break3: 660px
+$break4: 580px
+$break5: 570px
+$break6: 375px
+
+@mixin breakpoint($point)
+  @if $point == hugest
+    @media only screen and (max-width: 1600px)
+      @content
+  @else if $point == huger
+    @media only screen and (max-width: 1450px)
+      @content
+  @else if $point == huge
+    @media only screen and (max-width: 1360px)
+      @content
+  @else if $point == largest
+    @media only screen and (max-width: 1180px)
+      @content
+  @else if $point == larger
+    @media only screen and (max-width: 1180px)
+      @content
+  @else if $point == large
+    @media only screen and (max-width: 1120px)
+      @content
+  @else if $point == biggest
+    @media only screen and (max-width: 900px)
+      @content
+  @else if $point == bigger
+    @media only screen and (max-width: 860px)
+      @content
+  @else if $point == big2
+    @media only screen and (max-width: 820px)
+      @content
+  @else if $point == big
+    @media only screen and (max-width: 840px)
+      @content
+  @else if $point == small
+    @media only screen and (max-width: 735px)
+      @content
+  @else if $point == smaller
+    @media only screen and (max-width: 600px)
+      @content
+  @else if $point == smallest
+    @media only screen and (max-width: 550px)
+      @content
+  @else if $point == tiny
+    @media only screen and (max-width: 374px)
+      @content
+
+
+
+@mixin clearfix
+  &:after
+  content: ''
+  display: table
+  clear: both
+
+
+@mixin el-fadein($duration)
+  visibility: hidden
+  opacity: 0
+  -webkit-transition: opacity $duration
+  transition: opacity $duration
+  pointer-events: none
+
+  &--visible
+    visibility: visible
+    opacity: 1
+    pointer-events: auto
+    @content
+
+@mixin text-ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+

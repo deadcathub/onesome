@@ -1,0 +1,238 @@
+$color-showcase-header: white
+
+.header
+  width: 100%
+  height: $header-height
+  padding-left: $space-4
+  padding-right: $space-4
+  position: relative
+  align-items: center
+  justify-content: space-between
+  display: flex
+
+  @include breakpoint(larger)
+    min-width: 0
+
+  @media only screen and (max-width: 760px)
+    height: 60px
+    padding-top: 0
+
+  &_logo
+
+    @include breakpoint(larger)
+      left: 50%
+      -webkit-transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%)
+
+    @include breakpoint(smaller)
+      left: auto
+      right: 30px
+      -webkit-transform: translate(0, -50%)
+      transform: translate(0, -50%)
+
+    @media only screen and (max-width: 430px)
+      right: $space-2
+
+  &_sandwich
+    margin-left: -16px
+    display: none
+
+    @include breakpoint(larger)
+      display: block
+
+    @media only screen and (max-width: 430px)
+      left: $space-2
+
+
+.menu
+
+  @media only screen and (max-width: 1760px)
+    min-width: 0
+    text-align: center
+
+  @include breakpoint(larger)
+    display: none
+
+  &_list
+    display: flex
+    flex-wrap: wrap
+
+  &_item
+
+  &_link
+    font-size: $font-stack-medium-3-fs
+    font-weight: $font-stack-medium-3-fw
+    padding: .5em .5em
+
+  &_line
+    margin: 30px 0
+    display: none
+
+
+
+.m-menu
+  width: 100%
+  height: 100%
+  text-align: center
+  background-color: $color-brand-tr
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  z-index: 11
+  display: table
+  @include el-fadein($trans-fast)
+
+  &_close
+    font: 30px system-ui, sans-serif
+    color: white
+    position: absolute
+    top: 12px
+    left: 23px
+
+  &_content
+    vertical-align: middle
+    display: table-cell
+
+  &_item
+    margin-bottom: 1em
+    -webkit-transition: all $trans-faster
+    transition: all $trans-faster
+
+  &_link
+    color: white
+
+  .opened &
+    z-index: 11
+    opacity: 1
+    -webkit-transition: opacity .2s ease
+    transition: opacity .2s ease
+    visibility: visible
+    pointer-events: auto
+    display: table
+
+
+
+.egg
+  font-size: 0
+  position: absolute
+  right: 20%
+  bottom: 0
+  -webkit-transform: translateY($transl-smaller)
+  transform: translateY($transl-smaller)
+  -webkit-transition: transform $trans-faster
+  transition: transform $trans-faster
+
+  @include breakpoint(biggest)
+    display: none
+
+  &:hover
+    transform: translateY(0)
+
+  & img
+    width: 80px
+
+
+
+@-webkit-keyframes slideBg
+  0%
+    background-position: 0% 50%
+  50%
+    background-position: 100% 50%
+  100%
+    background-position: 0% 50%
+
+@keyframes slideBg
+  0%
+    background-position: 0% 50%
+  50%
+    background-position: 100% 50%
+  100%
+    background-position: 0% 50%
+
+
+
+.inst
+  white-space: nowrap
+  padding-left: 30px
+  position: relative
+  display: inline-block
+
+  &:before
+    width: 24px
+    height: 24px
+    content: ''
+    background: url('https://www.instagram.com/static/bundles/metro/sprite_glyphs_a7aeacb41348.png/a7aeacb41348.png') -84px -100px no-repeat
+    position: absolute
+    left: 0
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    transform: translateY(-50%)
+  
+  &_title
+    font-size: $font-stack-medium-fs
+    font-weight: $font-stack-medium-fw
+    color: #232323
+    vertical-align: middle
+    display: inline-block
+
+
+
+.subnav
+  width: 100%
+  min-height: 50px
+  background-color: white
+  border-bottom: 1px solid #eaeaea
+  padding-left: $space-2
+  padding-right: $space-2
+  -webkit-transform: translate3d(0, -300%, 0)
+  transform: translate3d(0, -300%, 0)
+  -webkit-transition: transform $trans-faster ease
+  transition: transform $trans-faster ease
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10
+  align-items: center
+  justify-content: space-between
+  display: flex
+
+  &--visible
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+  &_logo
+    border: 0
+
+  &_content
+    min-width: $content-width
+    position: relative
+    align-items: center
+    justify-content: space-between
+    display: flex
+
+    @media only screen and (max-width: 1800px)
+      max-width: $art-cnt-width
+      padding-left: 0
+      padding-right: 0
+
+    @media only screen and (max-width: 1360px)
+      text-align: center
+
+  &_title
+    font-size: $font-stack-medium-fs
+    font-weight: $font-stack-medium-fw
+
+    @media only screen and (max-width: 1100px)
+      display: none
+
+  &_likely path
+    fill: #999
+
+
+
+
+
+
+

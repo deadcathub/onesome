@@ -1,0 +1,126 @@
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+input, textarea, button
+  -webkit-appearance: none
+
+header, footer, nav, section, aside, article, figure, figcaption, blockquote, textarea
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  display: block
+
+div, p, h1, h2, h3, h4, input, ul, li
+  box-sizing: border-box
+
+img
+  max-width: 100%
+  height: auto
+
+::-ms-clear
+  display: none
+
+::selection
+  background: #f2f2f2
+
+::-moz-selection
+  background: #f2f2f2
+
+
+a
+  color: $color-link
+  text-decoration: none
+  transition: color $trans-fastest
+
+  &:hover
+    color: $color-link-hover
+
+
+.c-link
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//PwNAgAEACPwC/tuiTRYAAAAASUVORK5CYII=") repeat
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 2
+
+.bb
+  box-sizing: border-box
+
+.ns
+  user-select: none
+
+.cf:after
+  content: ''
+  height: 0
+  line-height: 0
+  clear: both
+  display: block
+
+.cl
+  clear: both
+
+.fl
+  float: left
+
+.fr
+  float: right
+
+.nb
+  border: 0
+
+.solid
+  background-color: $color-brand-3
+
+.hyphen
+  -ms-word-break: break-all
+  word-break: break-all
+  word-break: break-word
+  -webkit-hyphens: auto
+  -moz-hyphens: auto
+  hyphens: auto
+
+.no-w
+  white-space: nowrap
+
+.m-left
+  margin-left: 2px
+
+.m-right
+  margin-right: 2px
+
+.s
+  font-size: inherit
+  line-height: inherit
+  margin-right: .15em
+
+.n
+  font: 400 21px Alegreya, serif
+  color: #0a0a0a
+  margin-left: .3em
+  margin-right: .3em
+
+i
+  font-size: inherit
+  font-style: normal
+  margin: 0 .08em
+
+@keyframes fadeIn
+  from
+    opacity: 0
+    transform: translate(0, 4px)
+  to
+    opacity: 1
+    transform: translate(0, 0)
+
+.fadein
+  opacity: 0
+  transform: translate(0, 3px)
+  animation: fadeIn .4s ease .4s forwards
+
+
+
+  

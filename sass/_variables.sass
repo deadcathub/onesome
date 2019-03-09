@@ -1,0 +1,235 @@
+
+
+// -------------------- color --------------------
+
+// color font
+$color-black:                #050505
+$color-black-light:          lighten($color-black, 5%)
+$color-black-lighten:        lighten($color-black, 10%)
+$color-black-dark:           darken($color-black, 5%)
+
+// color link
+$color-link:                 #050505
+$color-link-hover:           #b4966e
+
+// color brand
+$color-brand:                #f6f6f6
+$color-brand-cnt:            lighten($color-brand, 40%)
+$color-brand-cnt-light:      lighten($color-brand, 60%)
+$color-brand-cnt-dark:       darken($color-brand-cnt, 15%)
+$color-brand-cnt-darken:     darken($color-brand-cnt, 25%)
+$color-brand-cnt-darkest:    darken($color-brand-cnt, 35%)
+$color-brand-tr:             rgba($color-brand, .95)
+
+$color-brand-2:              #292929
+$color-brand-2-cnt:          #9a9a9a
+$color-brand-cnt-2-dark:     darken($color-brand-2-cnt, 15%)
+$color-brand-cnt-2-darken:   darken($color-brand-2-cnt, 25%)
+$color-brand-cnt-2-darkest:  darken($color-brand-2-cnt, 35%)
+$color-brand-2-tr:           rgba($color-brand-2, .95)
+
+$color-brand-3:              #f2f2f2
+$color-brand-3-cnt:          darken($color-brand-3, 40%)
+$color-brand-3-cnt-light:    lighten($color-brand-3-cnt, 15%)
+$color-brand-3-cnt-lighter:  lighten($color-brand-3-cnt, 25%)
+$color-brand-3-cnt-lightest: lighten($color-brand-3-cnt, 35%)
+$color-brand-3-tr:           rgba($color-brand-3, .97)
+
+// color border
+$color-border:               #ababab
+$color-border-light:         #e0e0e0
+$color-border-lighter:       #eaeaea
+
+// gradient
+$gradient-brand-top:         linear-gradient(to top, $color-brand 20%, transparent 95%)
+$gradient-brand-bottom:      linear-gradient(to bottom, $color-brand 0%, transparent 100%)
+$gradient-brand-bg:          linear-gradient(to top, rgba(35, 35, 35, .8) 0%, transparent 100%)
+$gradient-inst:              linear-gradient(45deg, #f09841 0%, #e67049 10%, #db324f 20%, #cc2f6e 30%, #ba228a 40%, #e67049 60%, #db324f 70%, #cc2f6e 80%, #ba228a 90%)
+
+$dotted: rgba(54, 70, 117, .7) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpi/P//PwMMMIEIRkbGNDCNLAMQYACXZwZoe2ld7QAAAABJRU5ErkJggg==') repeat
+
+
+
+// -------------------- primitives --------------------
+
+// transition duration
+$trans-fastest: .2s
+$trans-faster:  .3s
+$trans-fast:    .4s
+$trans:         .5s
+$trans-slow:    .6s
+$trans-slower:  .7s
+$trans-slowest: .8s
+
+// translate length
+$transl-smallest: 1px
+$transl-smaller:  2px
+$transl-small:    4px
+$transl:          6px
+
+// z-index
+$zindex-header:   1000
+$zindex-dropdown: 1100
+$zindex-modal:    1400
+
+// border-radius
+$border-radius:        6px
+$border-radius-half:   $border-radius / 2
+$border-radius-double: $border-radius * 2
+
+
+
+// -------------------- layout --------------------
+
+// main post width
+$width-cnt:   1500px
+$width-cnt-2: 940px
+
+//content width
+$content-width:  1330px
+$page-min-width: 320px
+
+// header height
+$header-height: 100px
+
+//article content
+$art-cnt-width:   1000px
+$art-cnt-width-2: 800px
+
+// content hor basic space
+$space:   10px
+$space-2: $space * 2
+$space-3: $space * 3
+$space-4: $space * 4
+
+// post-list
+
+
+
+// ---------------  font stack ---------------
+
+// family
+$font-family:   Noah, Roboto, Arial, sans-serif
+$font-family-2: Alegreya, Georgia, serif
+
+// size
+$font-size:   12px
+$font-size-2: 14px
+$font-size-3: 16px
+$font-size-4: 18px
+
+// weight
+$font-weight-normal: 400
+$font-weight-medium: 600
+$font-weight-bold:   800
+
+
+// normal stack
+$font-stack-fs:     18px
+$font-stack-lh-s:   1.4
+$font-stack-lh-m:   1.5
+$font-stack-lh-l:   1.6
+
+$font-stack-2-fs:   20px
+$font-stack-2-lh-s: 1.4
+$font-stack-2-lh-m: 1.5
+$font-stack-2-lh-l: 1.6
+
+$font-stack-3-fs:   22px
+$font-stack-3-lh-s: 1.4
+$font-stack-3-lh-m: 1.5
+$font-stack-3-lh-l: 1.6
+
+$font-stack-4-fs:   26px
+$font-stack-4-lh-s: 1.4
+$font-stack-4-lh-m: 1.5
+$font-stack-4-lh-l: 1.6
+
+$font-stack-5-fs:   30px
+$font-stack-5-lh-s: 1.4
+$font-stack-5-lh-m: 1.5
+$font-stack-5-lh-l: 1.6
+
+// medium stack
+$font-stack-medium-fs:     18px
+$font-stack-medium-fw:     500
+$font-stack-medium-lh-s:   1.4
+$font-stack-medium-lh-m:   1.5
+$font-stack-medium-lh-l:   1.6
+
+$font-stack-medium-2-fs:   20px
+$font-stack-medium-2-fw:   500
+$font-stack-medium-2-lh-s: 1.4
+$font-stack-medium-2-lh-m: 1.5
+$font-stack-medium-2-lh-l: 1.6
+
+$font-stack-medium-3-fs:   22px
+$font-stack-medium-3-fw:   500
+$font-stack-medium-3-lh-s: 1.4
+$font-stack-medium-3-lh-m: 1.5
+$font-stack-medium-3-lh-l: 1.6
+
+$font-stack-medium-4-fs:   26px
+$font-stack-medium-4-fw:   500
+$font-stack-medium-4-lh-s: 1.4
+$font-stack-medium-4-lh-m: 1.5
+$font-stack-medium-4-lh-l: 1.6
+
+// bold stack
+$font-stack-bold-fs:     20px
+$font-stack-bold-fw:     600
+$font-stack-bold-lh-s:   1.4
+$font-stack-bold-lh-m:   1.5
+$font-stack-bold-lh-l:   1.6
+
+$font-stack-bold-2-fs:   22px
+$font-stack-bold-2-fw:   600
+$font-stack-bold-2-lh-s: 1.4
+$font-stack-bold-2-lh-m: 1.5
+$font-stack-bold-2-lh-l: 1.6
+
+$font-stack-bold-3-fs:   26px
+$font-stack-bold-3-fw:   600
+$font-stack-bold-3-lh-s: 1.4
+$font-stack-bold-3-lh-m: 1.5
+$font-stack-bold-3-lh-l: 1.6
+
+$font-stack-bold-4-fs:   30px
+$font-stack-bold-4-fw:   600
+$font-stack-bold-4-lh-s: 1.4
+$font-stack-bold-4-lh-m: 1.5
+$font-stack-bold-4-lh-l: 1.6
+
+$font-stack-bold-5-fs:   34px
+$font-stack-bold-5-fw:   600
+$font-stack-bold-5-lh-s: 1.2
+$font-stack-bold-5-lh-m: 1.3
+$font-stack-bold-5-lh-l: 1.4
+
+$font-stack-bold-6-fs:   46px
+$font-stack-bold-6-fw:   600
+$font-stack-bold-6-lh-s: 1.2
+$font-stack-bold-6-lh-m: 1.3
+$font-stack-bold-6-lh-l: 1.4
+
+$font-stack-bold-7-fs:   52px
+$font-stack-bold-7-fw:   600
+$font-stack-bold-7-lh-s: 1.2
+$font-stack-bold-7-lh-m: 1.3
+$font-stack-bold-7-lh-l: 1.4
+
+
+
+// -------------------- url --------------------
+
+//main sprite
+$sprite-main: url("images/sprite.svg")
+
+
+
+
+
+
+
+
+
