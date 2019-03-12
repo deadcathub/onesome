@@ -1,0 +1,87 @@
+// new post pic width
+.b-post
+  font-size: 0
+  padding-top: 20%
+  position: relative
+  /*box-shadow: 0 20px 8px -12px rgba(0, 0, 0, .05), 0 6px 20px 0 rgba(0, 0, 0, .05)*/
+
+  @media only screen and (max-width: 530px)
+    padding-top: 100px
+
+  @media only screen and (max-width: 460px)
+    padding-top: 90px
+
+  @media only screen and (max-width: 420px)
+    padding-top: 80px
+
+  @media only screen and (max-width: 370px)
+    padding-top: 73px
+
+  &_pic
+    width: 80%
+
+    @media only screen and (max-width: 530px)
+      width: 90%
+
+  &_holder
+    padding-top: 100%
+    position: relative
+    overflow: hidden
+
+    & img
+      min-width: 100%
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      transition: transform .4s ease
+
+  &:hover img
+    transform: scale(1.015)
+
+  &_data
+    width: 85%
+    position: absolute
+    top: 0
+    right: 0
+
+    @media only screen and (max-width: 530px)
+      width: 90%
+
+  &_section
+    font-size: $font-stack-medium-fs-2
+    font-weight: $font-stack-medium-fw
+    text-transform: lowercase
+    margin-right: .7em
+
+  &_date
+    font-size: $font-stack-fs
+    display: block
+
+  &_title
+    font-size: $font-stack-bold-fs-7
+    line-height: $font-stack-bold-lh-s
+    font-weight: $font-stack-bold-fw
+    color: #212121
+    margin-top: 10px
+    margin-bottom: 0
+
+    @media only screen and (max-width: 800px)
+      font-size: $font-stack-bold-fs-6
+      margin-top: 2px
+
+    @media only screen and (max-width: 460px)
+      font-size: $font-stack-bold-fs-5
+
+    @media only screen and (max-width: 420px)
+      font-size: $font-stack-bold-fs-4
+
+    @media only screen and (max-width: 370px)
+      font-size: $font-stack-bold-fs-3
+    
+
+
+
+
+
