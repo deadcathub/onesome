@@ -189,20 +189,21 @@ function wp_corenavi() {
 
 
 // post and simple pages custom field "title"
-function kama_meta_title($sep=" ",$bloginfo_name=' | deadcat.me') {
-  global $wp_query,$post;
+function kama_meta_title($sep=" ", $bloginfo_name=' ⋅ Deadcat Journal') {
+  global $wp_query, $post;
   if ( !$bloginfo_name ) $bloginfo_name = get_bloginfo('name');
+  if ( is_home() ) $bloginfo_name = '';
   $wp_title = wp_title('', 0, 'right');
 
   if ( is_category() || is_tag() ) {
     $desc = $wp_query->queried_object->description;
     if ( $desc ) preg_match ('!\[title=(.*)\]!iU',$desc,$match);
-    $out = $match[1] ? $match[1].$sep : (( is_tag() )?"Метка:":"Категория:")." $wp_title";
+    $out = $match[1] ? $match[1].$sep : (( is_tag() )?"Метка:": "Категория:")." $wp_title";
   }
   elseif ( is_home() ) $out = 'Deadcat Journal';
   elseif ( is_singular() ) $out = ($free_title = get_post_meta($post->ID, "title", true)) ? $free_title.$sep : $wp_title;
 
-  $out = trim($out.$bloginfo_name);
+  $out = trim( $out.$bloginfo_name );
   if ( $paged = get_query_var('paged') ) $out = "$out (страница $paged)";
   return print $out;
 }

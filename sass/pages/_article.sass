@@ -1,47 +1,37 @@
-$content-shift: 200px
 
-.article
+$art-cnt-width:   900px
+$art-cnt-width-2: 800px
+$content-shift:   150px
+
+.p-article
   background-color: white
   background-position: center top
   background-repeat: no-repeat
-  padding: 0 $space-4 50px
-  margin-left: $space-2
-  margin-right: $space-2
-
-  @media only screen and (max-width: 900px)
-    padding-left: $space-3
-    padding-right: $space-3
-
-  @media only screen and (max-width: 760px)
-    padding-left: $space-2
-    padding-right: $space-2
-
-  @media only screen and (max-width: 400px)
-    padding-left: $space-2
-    padding-right: $space-2
 
   & p:not([class])
     max-width: $art-cnt-width
-    font-size: $font-stack-3-fs
-    line-height: $font-stack-3-lh-l
+    font-size: $font-stack-fs-3
+    line-height: $font-stack-lh-l
     padding-right: $content-shift
-    margin: 1em auto
+    margin: 20px auto
+
+    @media only screen and (max-width: 1100px)
+      padding-right: 20%
 
     @media only screen and (max-width: 900px)
       padding-right: 0
 
     @media only screen and (max-width: 400px)
-      font-size: $font-stack-2-fs
-      line-height: $font-stack-2-lh-l
+      font-size: $font-stack-fs-2
 
   & > h2:not([class])
     max-width: $art-cnt-width
-    font-size: $font-stack-bold-5-fs
-    line-height: $font-stack-bold-5-lh-m
-    font-weight: $font-stack-bold-5-fw
-    color: $color-black-lighten
+    font-size: $font-stack-bold-fs-4
+    line-height: $font-stack-bold-lh-m
+    font-weight: $font-stack-bold-fw
+    color: #212121
     padding-right: $content-shift
-    margin: 55px auto 30px
+    margin: 50px auto 30px
     clear: both
 
     @media only screen and (max-width: 900px)
@@ -52,19 +42,18 @@ $content-shift: 200px
       margin-bottom: 25px
 
     @media only screen and (max-width: 400px)
-      font-size: $font-stack-bold-3-fs
-      line-height: $font-stack-bold-3-lh-m
-      font-weight: $font-stack-bold-3-fw
+      font-size: $font-stack-bold-fs-3
 
   &_more
-    margin-top: 90px
-    margin-bottom: 150px
+    border-top: 1px solid #eaeaea
+    padding-top: 100px
+    padding-bottom: 100px
 
 
-.article-header
+.p-article-header
   background-repeat: no-repeat
   background-position: center
-  padding: 85px $space-4 0
+  padding: 170px $space-4 0
   margin-left: - $space-4
   margin-right: - $space-4
   position: relative
@@ -93,14 +82,34 @@ $content-shift: 200px
     @media only screen and (max-width: 760px)
       margin-bottom: 70px
 
-  &_title
+  &_wrap
     max-width: $art-cnt-width
-    font-size: $font-stack-bold-7-fs
-    line-height: $font-stack-bold-7-lh-m
-    font-weight: $font-stack-bold-7-fw
-    color: $color-black-lighten
-    padding-right: 5%
-    margin: 0 auto 55px
+    position: relative
+    margin-left: auto
+    margin-right: auto
+
+  &_meta
+    position: absolute
+    top: 22px
+    right: 0
+    z-index: 5
+
+    @media only screen and (max-width: 600px)
+      border: 0
+
+  &_date
+    font-size: $font-stack-fs
+
+    &--white
+      color: white
+
+  &_title
+    font-size: $font-stack-bold-fs-8
+    line-height: $font-stack-bold-lh-m
+    font-weight: $font-stack-bold-fw
+    color: #2d2d2d
+    padding-right: $content-shift
+    margin: 0 auto 50px
     position: relative
     z-index: 2
 
@@ -111,54 +120,32 @@ $content-shift: 200px
       margin-bottom: 50px
 
     @media only screen and (max-width: 600px)
-      font-size: $font-stack-bold-5-fs
-      line-height: $font-stack-bold-5-lh-s
-      font-weight: $font-stack-bold-5-fw
+      font-size: $font-stack-bold-fs-7
       padding-right: 0
       margin-bottom: 45px
 
     @media only screen and (max-width: 400px)
-      font-size: $font-stack-bold-5-fs
-      line-height: $font-stack-bold-5-lh-s
-      font-weight: $font-stack-bold-5-fw
+      font-size: $font-stack-bold-fs-6
 
     &--white
       color: white
 
-  &_meta
-    max-width: $art-cnt-width
-    font-size: 0
-    margin: 0 auto 150px
 
-    @media only screen and (max-width: 760px)
-      margin-bottom: 100px
-      display: block
-
-    @media only screen and (max-width: 600px)
-      margin-bottom: 40px
-
-  &_date
-    font-size: $font-stack-fs
-
-    &--white
-      color: white
-
-.article-lead
-  max-width: $art-cnt-width
-  font-size: $font-stack-5-fs
-  line-height: $font-stack-5-lh-l
-  margin: 0 auto 55px
+.p-article-lead
+  font-size: $font-stack-fs-5
+  line-height: $font-stack-lh-l
+  color: #121212
+  margin: 0 auto 80px
 
   @media only screen and (max-width: 760px)
-    font-size: $font-stack-4-fs
-    line-height: $font-stack-4-lh-m
+    font-size: $font-stack-fs-4
     margin-bottom: 50px
 
   @media only screen and (max-width: 600px)
     margin-bottom: 46px
 
   @media only screen and (max-width: 400px)
-    font-size: $font-stack-3-fs
+    font-size: $font-stack-fs-3
 
   &--white
     color: white
@@ -204,8 +191,8 @@ $content-shift: 200px
 
   &_info
     max-width: 700px
-    font-size: $font-stack-2-fs
-    line-height: $font-stack-2-lh-l
+    font-size: $font-stack-fs-2
+    line-height: $font-stack-lh-l
     margin-top: 25px
     position: relative
 
@@ -249,8 +236,8 @@ $content-shift: 200px
     max-width: 250px
 
   &_figure
-    font: 400 74px Alegreya
-    color: #171717
+    font: 400 64px Alegreya
+    color: #212121
     white-space: nowrap
 
     @media only screen and (max-width: 400px)
@@ -268,8 +255,8 @@ $content-shift: 200px
       border-color: #e5e5e5
 
   &_text
-    font-size: $font-stack-2-fs
-    line-height: $font-stack-2-lh-s
+    font-size: $font-stack-fs-2
+    line-height: $font-stack-lh-s
     margin-top: 26px
 
     @media only screen and (max-width: 400px)
@@ -297,19 +284,19 @@ $content-shift: 200px
     margin-left: 0
 
   &_text
-    font: 43px/1.3 Alegreya, serif
+    font: 36px/1.5 Alegreya, serif
     margin-top: 0
     margin-bottom: 0
     position: relative
     z-index: 2
 
     @media only screen and (max-width: 760px)
-      font-size: $font-stack-5-fs
-      line-height: $font-stack-5-lh-m
+      font-size: $font-stack-fs-5
+      line-height: $font-stack-lh-m
 
   &_author
-    font-size: $font-stack-4-fs
-    line-height: $font-stack-4-lh-l
+    font-size: $font-stack-fs-4
+    line-height: $font-stack-lh-l
     margin-top: 35px
     margin-left: 100px
     position: relative
@@ -320,48 +307,13 @@ $content-shift: 200px
       margin-left: 20px
 
     @media only screen and (max-width: 760px)
-      font-size: $font-stack-2-fs
-      line-height: $font-stack-2-lh-l
+      font-size: $font-stack-fs-2
+      line-height: $font-stack-lh-l
       margin-top: 15px
       margin-left: 0
 
     &--light
       border-color: #e5e5e5
-
-
-.subscribe
-  text-align: center
-  background-color: #efd3b0
-  padding-top: 10px
-  padding-bottom: 10px
-  margin-top: 30px
-
-  &_link
-    color: $color-black
-    display: inline-block
-
-    &:hover
-      color: $color-black
-
-  &_ico
-    max-width: 60px
-    vertical-align: middle
-    display: inline-block
-
-  &_meta
-    text-align: left
-    margin-left: 15px
-    vertical-align: middle
-    display: inline-block
-
-  &_title
-    font-size: $font-stack-bold-2-fs
-    font-weight: $font-stack-bold-2-fw
-    line-height: $font-stack-bold-2-lh-s
-
-  &_text
-    font-size: $font-stack-fs
-    line-height: $font-stack-lh-s
 
 .google
   visibility: hidden

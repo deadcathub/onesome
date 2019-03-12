@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-      <section class="">
+      <section>
 
         <!-- <div class="b-day | index_day">
           <h3 class="b-day_title">Дата</h3>
@@ -18,7 +18,7 @@
           </p>
         </div> -->
 
-        <ul class="l-post-col | index_post-list">
+        <ul class="l-post-col | p-index_post-list">
 
 <?php query_posts($query); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -35,25 +35,16 @@
         </ul>
       </section>
 
-      <!-- <div class="seo-wrapper">
+      <div class="seo-wrapper">
         <section class="content">
-          <h1 class="seo-title">Музыкальный <span class="no-w">интернет-журнал</span> о&nbsp;зарубежном роке</h1>
-          <ul class="seo">
-            <li class="seo_item">
-              <p class="seo_text">
-                Erock&nbsp;— <span class="no-w">интернет-журнал</span> о&nbsp;классическом периоде зарубежной <span class="no-w">рок-музыки</span> <span class="no-w">60-х</span>
-                и&nbsp;<span class="no-w">70-х</span> годов. Раритетные записи, редкие фотографии, обзоры альбомов, биографии <span class="no-w">рок-групп</span> и&nbsp;исполнителей
-                без&nbsp;характерного запаха нафталина. Мы&nbsp;пропагандируем хороший музыкальный вкус, не&nbsp;злоупотребляя пошлым романтизмом.
-              </p>
-            </li>
-            <li class="seo_item">
-              <p class="seo_text">
-                Знаем, что&nbsp;классический рок это не&nbsp;только Led&nbsp;Zeppelin, Deep&nbsp;Purple, Uriah&nbsp;Heep и&nbsp;их&nbsp;производные.
-                Полностью согласны с&nbsp;утверждением, что&nbsp;бить людей за&nbsp;плохой музыкальный вкус&nbsp;— это&nbsp;нормально.
-              </p>
-            </li>
-          </ul>
+          <h1 class="seo-title">Deadcat Journal</h1>
+          <p class="seo_text">
+            Интернет-журнал о&nbsp;классическом периоде зарубежной рок-музыки. Раритетные записи
+            редкие фотографии, обзоры альбомов, биографии рок-групп и&nbsp;исполнителей
+            без&nbsp;характерного запаха нафталина. Мы&nbsp;пропагандируем хороший музыкальный вкус,
+            не&nbsp;злоупотребляя пошлым романтизмом.
+          </p>
         </section>
-      </div> -->
+      </div>
 
 <?php get_footer(); ?>

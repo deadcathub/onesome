@@ -1,34 +1,22 @@
 $(document).ready(function() {
 
 
-
-
   var body = $('body'),
-    pageWrapper = $('.js-page-wrapper');
-
+      pageWrapper = $('.js-page-wrapper');
 
 
   //mobile menu
   $('.js-sandwich').on('click', function() {
-    if ( !body.hasClass('opened') ) {
-      body.addClass('opened');
-    } else {
-      body.removeClass('opened');
-    }
+    body.toggleClass('is-opened');
   });
-
-  $('.js-menu-close').on('click', function() {
-    body.removeClass('opened');
-  });
-
 
 
   //header
   var banner = $('.js-banner'),
-    subNav = $('.js-subnav'),
-    lastScrollTop = 0,
-    showcaseHeader = $('.header--showcase').length,
-    bannerHeight;
+      subNav = $('.js-subnav'),
+      lastScrollTop = 0,
+      showcaseHeader = $('.header--showcase').length,
+      bannerHeight;
 
   banner.length ? bannerHeight = banner.outerHeight() : bannerHeight = 0;
 

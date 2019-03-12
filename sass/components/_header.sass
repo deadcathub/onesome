@@ -3,54 +3,32 @@ $color-showcase-header: white
 .header
   width: 100%
   height: $header-height
-  padding-left: $space-4
-  padding-right: $space-4
   position: relative
   align-items: center
   justify-content: space-between
   display: flex
 
-  @include breakpoint(larger)
-    min-width: 0
-
-  @media only screen and (max-width: 760px)
-    height: 60px
-    padding-top: 0
+  @media only screen and (max-width: 800px)
+    padding-left: $space-2
+    padding-right: $space-2
 
   &_logo
-
-    @include breakpoint(larger)
-      left: 50%
-      -webkit-transform: translate(-50%, -50%)
-      transform: translate(-50%, -50%)
-
-    @include breakpoint(smaller)
-      left: auto
-      right: 30px
-      -webkit-transform: translate(0, -50%)
-      transform: translate(0, -50%)
-
-    @media only screen and (max-width: 430px)
-      right: $space-2
+    margin-right: -2px
 
   &_sandwich
-    margin-left: -16px
-    display: none
+    margin-left: -10px
 
-    @include breakpoint(larger)
-      display: block
+    body.is-opened &
+      position: relative
+      z-index: 11
 
-    @media only screen and (max-width: 430px)
-      left: $space-2
+    @media only screen and (min-width: 801px)
+      display: none
 
 
 .menu
 
-  @media only screen and (max-width: 1760px)
-    min-width: 0
-    text-align: center
-
-  @include breakpoint(larger)
+  @media only screen and (max-width: 800px)
     display: none
 
   &_list
@@ -58,99 +36,28 @@ $color-showcase-header: white
     flex-wrap: wrap
 
   &_item
+    margin-left: 1.5em
 
   &_link
-    font-size: $font-stack-medium-3-fs
-    font-weight: $font-stack-medium-3-fw
-    padding: .5em .5em
+    font-size: $font-stack-medium-fs-4
+    font-weight: $font-stack-medium-fw
+    color: #0d0d0d
+    text-transform: lowercase
 
   &_line
     margin: 30px 0
     display: none
 
-
-
-.m-menu
-  width: 100%
-  height: 100%
-  text-align: center
-  background-color: $color-brand-tr
-  position: fixed
-  top: 0
-  right: 0
-  left: 0
-  bottom: 0
-  z-index: 11
-  display: table
-  @include el-fadein($trans-fast)
-
-  &_close
-    font: 30px system-ui, sans-serif
-    color: white
-    position: absolute
-    top: 12px
-    left: 23px
-
-  &_content
-    vertical-align: middle
-    display: table-cell
-
-  &_item
-    margin-bottom: 1em
-    -webkit-transition: all $trans-faster
-    transition: all $trans-faster
-
-  &_link
-    color: white
-
-  .opened &
-    z-index: 11
-    opacity: 1
-    -webkit-transition: opacity .2s ease
-    transition: opacity .2s ease
-    visibility: visible
-    pointer-events: auto
-    display: table
-
-
-
-.egg
-  font-size: 0
-  position: absolute
-  right: 20%
-  bottom: 0
-  -webkit-transform: translateY($transl-smaller)
-  transform: translateY($transl-smaller)
-  -webkit-transition: transform $trans-faster
-  transition: transform $trans-faster
-
-  @include breakpoint(biggest)
-    display: none
-
-  &:hover
-    transform: translateY(0)
-
-  & img
-    width: 80px
-
-
-
-@-webkit-keyframes slideBg
-  0%
-    background-position: 0% 50%
-  50%
-    background-position: 100% 50%
-  100%
-    background-position: 0% 50%
-
-@keyframes slideBg
-  0%
-    background-position: 0% 50%
-  50%
-    background-position: 100% 50%
-  100%
-    background-position: 0% 50%
-
+  body.is-opened &
+    width: 100%
+    height: 100%
+    background-color: rgba(255, 255, 255, .97)
+    padding-top: 100px
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 10
+    display: block
 
 
 .inst
@@ -173,7 +80,7 @@ $color-showcase-header: white
   &_title
     font-size: $font-stack-medium-fs
     font-weight: $font-stack-medium-fw
-    color: #232323
+    color: #292929
     vertical-align: middle
     display: inline-block
 
@@ -181,7 +88,7 @@ $color-showcase-header: white
 
 .subnav
   width: 100%
-  min-height: 50px
+  min-height: 60px
   background-color: white
   border-bottom: 1px solid #eaeaea
   padding-left: $space-2
@@ -213,7 +120,6 @@ $color-showcase-header: white
     display: flex
 
     @media only screen and (max-width: 1800px)
-      max-width: $art-cnt-width
       padding-left: 0
       padding-right: 0
 
@@ -221,14 +127,11 @@ $color-showcase-header: white
       text-align: center
 
   &_title
-    font-size: $font-stack-medium-fs
+    font-size: $font-stack-medium-fs-2
     font-weight: $font-stack-medium-fw
 
     @media only screen and (max-width: 1100px)
       display: none
-
-  &_likely path
-    fill: #999
 
 
 

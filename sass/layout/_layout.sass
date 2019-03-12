@@ -51,7 +51,7 @@ body
   min-width: $page-min-width
   font-family: $font-family
   line-height: normal
-  font-weight: $font-weight-normal
+  font-weight: 400
   color: $color-black
   margin: 0
   position: relative
@@ -68,17 +68,25 @@ body
     -webkit-touch-callout: none
     -webkit-tap-highlight-color: rgba(200, 200, 200, .1)
 
-    &:not(.index)
-      background-color: $color-brand
 
 
 
 
+.l-wrap
+  padding-left: 40px
+  padding-right: 40px
+
+  @media only screen and (max-width: 800px)
+    padding-left: 30px
+    padding-right: 30px
+
+  @media only screen and (max-width: 700px)
+    padding-left: 15px
+    padding-right: 15px
 
 
 .page-wrapper
   padding-top: 0
-
 
 
 .content
