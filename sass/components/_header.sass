@@ -12,7 +12,7 @@ $color-showcase-header: white
 
   &_sandwich
 
-    @media only screen and (min-width: 801px)
+    @media only screen and (min-width: 851px)
       display: none
 
     body.is-opened &
@@ -21,7 +21,7 @@ $color-showcase-header: white
 
 .menu
 
-  @media only screen and (max-width: 800px)
+  @include breakpoint(bigger)
     display: none
 
   &_list

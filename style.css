@@ -376,9 +376,9 @@ body {
   position: relative; }
 
 .l-grid {
-  max-width: 1800px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 2100px;
+  padding-left: 100px;
+  padding-right: 100px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -392,20 +392,17 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 7%;
-    flex: 0 0 660px; }
-    @media only screen and (max-width: 1420px) {
+    flex: 0 0 600px; }
+    @media only screen and (max-width: 1399px) {
       .l-grid_item {
         margin-bottom: 80px; } }
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 850px) {
       .l-grid_item {
         padding-left: 0;
         padding-right: 0;
-        flex: 0 0 600px; } }
-    @media only screen and (max-width: 800px) {
-      .l-grid_item {
-        margin-bottom: 60px;
-        flex: 0 0 500px; } }
-    @media only screen and (max-width: 530px) {
+        margin-bottom: 80px;
+        flex: 0 0 540px; } }
+    @media only screen and (max-width: 570px) {
       .l-grid_item {
         flex: 0 0 100%; } }
     @media only screen and (max-width: 460px) {
@@ -432,14 +429,14 @@ body {
   align-items: center;
   justify-content: space-between;
   display: flex; }
-  @media only screen and (min-width: 801px) {
+  @media only screen and (min-width: 851px) {
     .header_sandwich {
       display: none; } }
   body.is-opened .header_sandwich {
     position: relative;
     z-index: 11; }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
   .menu {
     display: none; } }
 .menu_list {
@@ -582,18 +579,18 @@ body.is-opened .menu {
   padding-top: 20%;
   position: relative;
   /*box-shadow: 0 20px 8px -12px rgba(0, 0, 0, .05), 0 6px 20px 0 rgba(0, 0, 0, .05) */ }
-  @media only screen and (max-width: 530px) {
+  @media only screen and (max-width: 570px) {
     .b-post {
-      padding-top: 100px; } }
+      padding-top: 110px; } }
   @media only screen and (max-width: 460px) {
     .b-post {
-      padding-top: 90px; } }
+      padding-top: 100px; } }
   @media only screen and (max-width: 420px) {
     .b-post {
-      padding-top: 80px; } }
+      padding-top: 90px; } }
   .b-post_pic {
     width: 80%; }
-    @media only screen and (max-width: 530px) {
+    @media only screen and (max-width: 570px) {
       .b-post_pic {
         width: 90%; } }
   .b-post_holder {
@@ -615,7 +612,7 @@ body.is-opened .menu {
     position: absolute;
     top: 0;
     right: 0; }
-    @media only screen and (max-width: 530px) {
+    @media only screen and (max-width: 570px) {
       .b-post_data {
         width: 90%; } }
   .b-post_section {
@@ -631,18 +628,14 @@ body.is-opened .menu {
     line-height: 1.2;
     font-weight: 600;
     color: #212121;
-    margin-top: 10px;
+    margin-top: 0;
     margin-bottom: 0; }
-    @media only screen and (max-width: 800px) {
-      .b-post_title {
-        font-size: 42px;
-        margin-top: 2px; } }
     @media only screen and (max-width: 460px) {
       .b-post_title {
-        font-size: 38px; } }
+        font-size: 42px; } }
     @media only screen and (max-width: 420px) {
       .b-post_title {
-        font-size: 34px; } }
+        font-size: 38px; } }
 
 .paginator {
   font-size: 0;
@@ -834,10 +827,10 @@ body.is-opened .menu {
   .p-index_showcase {
     margin-top: 7%;
     margin-bottom: 200px; }
-    @media only screen and (max-width: 1420px) {
+    @media only screen and (max-width: 1399px) {
       .p-index_showcase {
         margin-top: 80px; } }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 850px) {
       .p-index_showcase {
         margin-top: 60px; } }
     @media only screen and (max-width: 460px) {
@@ -916,7 +909,7 @@ body.is-opened .menu {
     margin-left: auto;
     margin-right: auto; }
   .p-article_meta {
-    margin-bottom: 40px; }
+    margin-bottom: 30px; }
   .p-article_date {
     font-size: 18px;
     margin-right: 0.7em; }
@@ -928,7 +921,7 @@ body.is-opened .menu {
     font-weight: 600;
     color: #2d2d2d;
     padding-right: 10%;
-    margin: 0 auto 35px; }
+    margin: 0 auto 30px; }
     @media only screen and (max-width: 600px) {
       .p-article_title {
         font-size: 46px;
