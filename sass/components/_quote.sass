@@ -1,0 +1,47 @@
+.b-quote
+  max-width: $art-cnt-width
+  color: $color-black-lighten
+  margin: 45px auto
+  position: relative
+
+  @media only screen and (max-width: 600px)
+    margin-left: 0
+
+  @media only screen and (max-width: 400px)
+    margin-left: 0
+
+  &_text
+    font: 38px/1.5 Alegreya, serif
+    margin-top: 0
+    margin-bottom: 0
+    position: relative
+    z-index: 2
+
+    @media only screen and (max-width: 760px)
+      font-size: $font-stack-fs-5
+      line-height: $font-stack-lh-m
+
+  &_author
+    font-size: $font-stack-fs-5
+    line-height: $font-stack-lh-l
+    margin-top: 25px
+    margin-left: 50px
+    position: relative
+    z-index: 2
+    display: block
+
+    @media only screen and (max-width: 980px)
+      margin-left: 20px
+
+    @media only screen and (max-width: 760px)
+      font-size: $font-stack-fs-2
+      line-height: $font-stack-lh-l
+      margin-top: 15px
+      margin-left: 0
+
+    &--light
+      border-color: #e5e5e5
+
+
+
+

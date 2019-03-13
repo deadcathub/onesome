@@ -1,0 +1,59 @@
+.b-ref
+  max-width: 250px
+  font-size: 0
+  margin: 12px calc(50% - 600px) 20px 50px
+  position: relative
+  float: right
+
+  @media only screen and (max-width: 1300px)
+    margin-right: 0
+
+  @media only screen and (max-width: 760px)
+    max-width: 400px
+    margin: 62px 0 25px $space-3
+    float: none
+
+  @media only screen and (max-width: 600px)
+    margin-left: 0
+
+  &--figure
+    margin-top: -18px
+
+  &--center
+    text-align: center
+
+  &_pic
+    max-width: 250px
+
+  &_figure
+    font: 400 60px Alegreya
+    color: #212121
+    white-space: nowrap
+
+    @media only screen and (max-width: 400px)
+      font-size: 54px
+
+  &_ico
+    max-width: 80px
+    border: 1px solid transparent
+    border-radius: 100%
+    margin-bottom: -3px
+    vertical-align: top
+    display: inline-block
+
+    &--light
+      border-color: #e5e5e5
+
+  &_text
+    font-size: $font-stack-fs-2
+    line-height: $font-stack-lh-s
+    margin-top: 27px
+
+    @media only screen and (max-width: 400px)
+      font-size: $font-stack-fs
+
+    &--two
+      margin-top: 0
+
+    .b-ref_figure + &
+      margin-top: 2px

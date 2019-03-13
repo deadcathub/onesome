@@ -18,12 +18,12 @@
           </p>
         </div> -->
 
-        <ul class="l-post-col | p-index_post-list">
+        <ul class="l-grid | p-index_showcase">
 
 <?php query_posts($query); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-          <li class="l-post-col_item">
+          <li class="l-grid_item">
             <?php get_template_part('block', 'post'); ?>
           </li>
 
@@ -35,7 +35,7 @@
         </ul>
       </section>
 
-      <div class="seo-wrapper">
+<!--       <div class="seo-wrapper">
         <section class="content">
           <h1 class="seo-title">Deadcat Journal</h1>
           <p class="seo_text">
@@ -45,6 +45,6 @@
             не&nbsp;злоупотребляя пошлым романтизмом.
           </p>
         </section>
-      </div>
+      </div> -->
 
 <?php get_footer(); ?>

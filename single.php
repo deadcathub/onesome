@@ -12,11 +12,11 @@ $lead      = get_post_meta($post->ID, "lead", true);
 
 
 
-<article class="p-article">
+<article class="l-wrap | p-article">
 
 <?php if ( $repeat ) : ?>
 
-  <header class="js-article-header | p-article-header <?php if ( $color_one ) { echo 'p-article-header--color'; } ?>"
+  <header class="js-article-header | p-article_header <?php if ( $color_one ) { echo 'p-article_header--color'; } ?>"
     <?php
     if ( $color_one && $color_two && !$pic_one ) {
       echo 'style="background: linear-gradient(179deg, ' . '#' . $color_one . ','  . '#' . $color_two . ')"';
@@ -28,16 +28,18 @@ $lead      = get_post_meta($post->ID, "lead", true);
       echo 'style="background: url(' . $pic_one . ') no-repeat center/contain, linear-gradient(160deg, ' . '#' . $color_one . ','  . '#' . $color_two . ')"';
     }
     ?>>
-    <div class="p-article-header_wrap">
-      <div class="p-article-header_meta">
-        <?php the_category(' '); ?>
-        <time class="p-article-header_date <?php if ( $color_one ) { echo 'p-article-header_date--white'; } ?>" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo dateToRussian(get_the_date('j F Y')); ?></time>
-      </div>
-      <h1 class="p-article-header_title <?php if ( $color_one ) { echo 'p-article-header_title--white'; } ?>">
+    <div class="p-article_wrap">
+      <h1 class="p-article_title <?php if ( $color_one ) { echo 'p-article_title--white'; } ?>">
         <?php the_title(); ?>
       </h1>
+      <div class="p-article_meta">
+        <time class="p-article_date <?php if ( $color_one ) { echo 'p-article_date--white'; } ?>" datetime="<?php echo get_the_date('Y-m-d'); ?>">
+          <?php echo dateToRussian(get_the_date('j F Y')); ?>
+        </time>
+        <?php the_category(' '); ?>
+      </div>
       <?php if ( $lead ) : ?>
-      <p class="p-article-lead <?php if ( $color_one ) { echo 'p-article-lead--white'; } ?>">
+      <p class="p-article_lead <?php if ( $color_one ) { echo 'p-article_lead--white'; } ?>">
         <?php echo $lead; ?>
       </p>
     </div>
@@ -46,19 +48,19 @@ $lead      = get_post_meta($post->ID, "lead", true);
 
 <?php else : ?>
 
-  <header class="js-article-header | p-article-header">
-    <div class="p-article-header_wrap">
-      <div class="p-article-header_meta">
-        <?php the_category(' '); ?>
-        <time class="p-article-header_date" datetime="<?php echo get_the_date('Y-m-d'); ?>">
-          <?php echo dateToRussian(get_the_date('j F Y')); ?>
-        </time>
-      </div>
-      <h1 class="p-article-header_title">
+  <header class="js-article-header | p-article_header">
+    <div class="p-article_wrap">
+      <h1 class="p-article_title">
         <?php the_title(); ?>
       </h1>
+      <div class="p-article_meta">
+        <time class="p-article_date" datetime="<?php echo get_the_date('Y-m-d'); ?>">
+          <?php echo dateToRussian(get_the_date('j F Y')); ?>
+        </time>
+        <?php the_category(' '); ?>
+      </div>
       <?php if ( $lead ) : ?>
-      <p class="p-article-lead">
+      <p class="p-article_lead">
         <?php echo $lead; ?>
       </p>
     </div>
@@ -87,7 +89,7 @@ $lead      = get_post_meta($post->ID, "lead", true);
 
 
 <section class="p-article_more">
-  <ul class="l-post-col">
+  <ul class="l-grid">
 <?php
 $orig_post = $post;
 global $post;
@@ -105,7 +107,7 @@ $my_query = new wp_query( $args );
 while ( $my_query->have_posts() ) {
 $my_query->the_post();
 ?>
-    <li class="l-post-col_item">
+    <li class="l-grid_item">
       <?php get_template_part('block', 'post'); ?>
     </li>
 

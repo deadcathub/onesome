@@ -8,23 +8,16 @@ $color-showcase-header: white
   justify-content: space-between
   display: flex
 
-  @media only screen and (max-width: 800px)
-    padding-left: $space-2
-    padding-right: $space-2
-
   &_logo
-    margin-right: -2px
 
   &_sandwich
-    margin-left: -10px
-
-    body.is-opened &
-      position: relative
-      z-index: 11
 
     @media only screen and (min-width: 801px)
       display: none
 
+    body.is-opened &
+      position: relative
+      z-index: 11
 
 .menu
 

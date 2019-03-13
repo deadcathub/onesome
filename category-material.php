@@ -15,10 +15,10 @@
   </header>
 
   <section class="content content--two">
-    <ul class="l-post-col">
+    <ul class="l-grid">
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <li class="l-post-col_item">
+      <li class="l-grid_item">
 
         <?php get_template_part('block', 'post'); ?>
 

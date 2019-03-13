@@ -12,7 +12,6 @@
     <meta name="msapplication-config" content="none">
     <meta name='yandex-verification' content='623854631fd4c8fb' />
     <link href="https://fonts.googleapis.com/css?family=Alegreya:400,500,700,800&amp;subset=cyrillic" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&amp;subset=cyrillic" rel="stylesheet"> -->
     <!-- vollkorn -->
     <link rel="publisher" href="https://plus.google.com/106444110530197075060"/>
     <?php kama_meta_description() ?>
@@ -64,14 +63,12 @@
 
       <header class="js-header | l-wrap | header <?php $art_design = get_post_meta($post->ID, "art-design-showcase", true); if ( $art_design && is_singular() ) { echo 'header--showcase'; } if ( is_home() ) { echo ' reservsed'; } ?> n-s">
 
+        <a class="js-logo | logo | header_logo" href="<?php bloginfo ('url'); ?>">deadcat.me</a>
         <ul class="js-sandwich | b-sandwich | header_sandwich">
           <li class="b-sandwich_item"></li>
           <li class="b-sandwich_item"></li>
           <li class="b-sandwich_item"></li>
         </ul>
-
-        <a class="js-logo | logo | header_logo" href="<?php bloginfo ('url'); ?>">deadcat.me</a>
-
         <nav class="js-menu | menu">
           <ul class="menu_list">
             <li class="menu_item">
@@ -103,4 +100,4 @@
         </nav>
 
       </header>
-      <main class="l-wrap">
+      <main>

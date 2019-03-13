@@ -1,4 +1,4 @@
-.l-post-col
+.l-grid
   max-width: 1800px
   padding-left: 50px
   padding-right: 50px
@@ -8,9 +8,9 @@
   flex-wrap: wrap
   justify-content: space-around
 
-  @media only screen and (max-width: 1200px)
-    padding-left: 0
-    padding-right: 0
+  @include breakpoint(biggest)
+    padding-left: 15px
+    padding-right: 15px
 
   &_item
     padding-left: 30px
@@ -18,22 +18,22 @@
     margin-bottom: 7%
     flex: 0 0 660px
 
-    @media only screen and (max-width: 1500px)
+    @include breakpoint(large)
       margin-bottom: 80px
 
-    @media only screen and (max-width: 1200px)
+    @include breakpoint(biggest)
       padding-left: 0
       padding-right: 0
       flex: 0 0 600px
 
-    @media only screen and (max-width: 800px)
+    @include breakpoint(bigger)
       margin-bottom: 60px
       flex: 0 0 500px
 
-    @media only screen and (max-width: 530px)
+    @include breakpoint(big)
       flex: 0 0 100%
 
-    @media only screen and (max-width: 460px)
+    @include breakpoint(smallest)
       margin-bottom: 40px
 
 

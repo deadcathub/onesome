@@ -5,22 +5,19 @@
   position: relative
   /*box-shadow: 0 20px 8px -12px rgba(0, 0, 0, .05), 0 6px 20px 0 rgba(0, 0, 0, .05)*/
 
-  @media only screen and (max-width: 530px)
+  @include breakpoint(big)
     padding-top: 100px
 
-  @media only screen and (max-width: 460px)
+  @include breakpoint(smallest)
     padding-top: 90px
 
-  @media only screen and (max-width: 420px)
+  @include breakpoint(smaller)
     padding-top: 80px
-
-  @media only screen and (max-width: 370px)
-    padding-top: 73px
 
   &_pic
     width: 80%
 
-    @media only screen and (max-width: 530px)
+    @include breakpoint(big)
       width: 90%
 
   &_holder
@@ -46,14 +43,14 @@
     top: 0
     right: 0
 
-    @media only screen and (max-width: 530px)
+    @include breakpoint(big)
       width: 90%
 
   &_section
     font-size: $font-stack-medium-fs-2
     font-weight: $font-stack-medium-fw
     text-transform: lowercase
-    margin-right: .7em
+    color: $color-black
 
   &_date
     font-size: $font-stack-fs
@@ -67,18 +64,15 @@
     margin-top: 10px
     margin-bottom: 0
 
-    @media only screen and (max-width: 800px)
+    @include breakpoint(bigger)
       font-size: $font-stack-bold-fs-6
       margin-top: 2px
 
-    @media only screen and (max-width: 460px)
+    @include breakpoint(smallest)
       font-size: $font-stack-bold-fs-5
 
-    @media only screen and (max-width: 420px)
+    @include breakpoint(smaller)
       font-size: $font-stack-bold-fs-4
-
-    @media only screen and (max-width: 370px)
-      font-size: $font-stack-bold-fs-3
     
 
 
