@@ -2,6 +2,7 @@
   background-color: white
   background-position: center top
   background-repeat: no-repeat
+  padding-bottom: 100px
 
   & p:not([class])
     max-width: $art-cnt-width
@@ -47,9 +48,8 @@
   &_header
     background-repeat: no-repeat
     background-position: center
-    padding: 170px $space-4 0
-    margin-left: - $space-4
-    margin-right: - $space-4
+    padding: 170px 50px 0
+    margin: 0 -50px 80px
     position: relative
 
     @media only screen and (max-width: 800px)
@@ -64,11 +64,7 @@
       padding: 70px 15px 0
 
     &--color
-      padding-bottom: 23px
-      margin-bottom: 80px
-
-      @media only screen and (max-width: 760px)
-        margin-bottom: 70px
+      padding-bottom: 75px
 
   &_wrap
     max-width: $art-cnt-width
@@ -91,7 +87,7 @@
     line-height: $font-stack-bold-lh-m
     font-weight: $font-stack-bold-fw
     color: #2d2d2d
-    padding-right: 10%
+    padding-right: 200px
     margin: 0 auto 30px
 
     @media only screen and (max-width: 600px)
@@ -112,14 +108,17 @@
     font-size: $font-stack-fs-5
     line-height: $font-stack-lh-l
     color: #121212
-    margin: 0 auto 80px
+    padding-right: 200px
+    margin: 0 auto
+
+    @media only screen and (max-width: 1100px)
+      padding-right: 15%
+
+    @media only screen and (max-width: 900px)
+      padding-right: 0
 
     @media only screen and (max-width: 760px)
       font-size: $font-stack-fs-4
-      margin-bottom: 50px
-
-    @media only screen and (max-width: 600px)
-      margin-bottom: 46px
 
     @media only screen and (max-width: 400px)
       font-size: $font-stack-fs-3

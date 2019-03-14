@@ -4,7 +4,6 @@
 $color_one = get_post_meta($post->ID, "color-one", true);
 $color_two = get_post_meta($post->ID, "color-two", true);
 $pic_one   = get_post_meta($post->ID, "pic-one", true);
-$repeat    = get_post_meta($post->ID, "repeat", true);
 $lead      = get_post_meta($post->ID, "lead", true);
 ?>
 
@@ -14,32 +13,28 @@ $lead      = get_post_meta($post->ID, "lead", true);
 
 <article class="l-wrap | p-article">
 
-<?php if ( $repeat ) : ?>
+<?php if ( $color_two ) : ?>
 
-  <header class="js-article-header | p-article_header <?php if ( $color_one ) { echo 'p-article_header--color'; } ?>"
+  <header class="js-article-header | p-article_header <?php if ( $color_two ) { echo 'p-article_header--color'; } ?>"
     <?php
-    if ( $color_one && $color_two && !$pic_one ) {
-      echo 'style="background: linear-gradient(179deg, ' . '#' . $color_one . ','  . '#' . $color_two . ')"';
-    } else if ( $color_one && !$color_two && !$pic_one ) {
-      echo 'style="background: linear-gradient(179deg, ' . '#' . $color_one . ', ' . adjustBrightness($color_one, 20) . ')"';
-    } else if ( $color_one && !$color_two && $pic_one ) {
-      echo 'style="background: url(' . $pic_one . ') no-repeat center/contain, linear-gradient(160deg, ' . '#' . $color_one . ', ' . adjustBrightness($color_one, 20) . ')"';
-    } else if ( $color_one && $color_two && $pic_one ) {
-      echo 'style="background: url(' . $pic_one . ') no-repeat center/contain, linear-gradient(160deg, ' . '#' . $color_one . ','  . '#' . $color_two . ')"';
+    if ( $color_two && !$pic_one ) {
+      echo 'style="background: linear-gradient(179deg, ' . '#' . $color_two . ', ' . adjustBrightness($color_two, 20) . ')"';
+    } else if ( $color_two && $pic_one ) {
+      echo 'style="background: url(' . $pic_one . ') no-repeat center/contain, linear-gradient(160deg, ' . '#' . $color_two . ', ' . adjustBrightness($color_two, 20) . ')"';
     }
     ?>>
     <div class="p-article_wrap">
-      <h1 class="p-article_title <?php if ( $color_one ) { echo 'p-article_title--white'; } ?>">
+      <h1 class="p-article_title <?php if ( $color_two ) { echo 'p-article_title--white'; } ?>">
         <?php the_title(); ?>
       </h1>
       <div class="p-article_meta">
-        <time class="p-article_date <?php if ( $color_one ) { echo 'p-article_date--white'; } ?>" datetime="<?php echo get_the_date('Y-m-d'); ?>">
+        <time class="p-article_date <?php if ( $color_two ) { echo 'p-article_date--white'; } ?>" datetime="<?php echo get_the_date('Y-m-d'); ?>">
           <?php echo dateToRussian(get_the_date('j F Y')); ?>
         </time>
         <?php the_category(' '); ?>
       </div>
       <?php if ( $lead ) : ?>
-      <p class="p-article_lead <?php if ( $color_one ) { echo 'p-article_lead--white'; } ?>">
+      <p class="p-article_lead <?php if ( $color_two ) { echo 'p-article_lead--white'; } ?>">
         <?php echo $lead; ?>
       </p>
     </div>
