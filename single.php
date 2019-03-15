@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
 <?php
-$color_one = get_post_meta($post->ID, "color-one", true);
 $color_two = get_post_meta($post->ID, "color-two", true);
-$pic_one   = get_post_meta($post->ID, "pic-one", true);
+$is_album  = get_post_meta($post->ID, "is-album", true);
 $lead      = get_post_meta($post->ID, "lead", true);
+$summary   = get_post_meta($post->ID, "summary", true);
 ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -13,7 +13,7 @@ $lead      = get_post_meta($post->ID, "lead", true);
 
 <article class="l-wrap | p-article">
 
-<?php if ( $color_two ) : ?>
+<?php if ( $color_two && !$is_album ) : ?>
 
   <header class="js-article-header | p-article_header <?php if ( $color_two ) { echo 'p-article_header--color'; } ?>"
     <?php
@@ -24,15 +24,15 @@ $lead      = get_post_meta($post->ID, "lead", true);
     }
     ?>>
     <div class="p-article_wrap">
-      <h1 class="p-article_title <?php if ( $color_two ) { echo 'p-article_title--white'; } ?>">
-        <?php the_title(); ?>
-      </h1>
       <div class="p-article_meta">
         <time class="p-article_date <?php if ( $color_two ) { echo 'p-article_date--white'; } ?>" datetime="<?php echo get_the_date('Y-m-d'); ?>">
           <?php echo dateToRussian(get_the_date('j F Y')); ?>
         </time>
         <?php the_category(' '); ?>
       </div>
+      <h1 class="p-article_title <?php if ( $color_two ) { echo 'p-article_title--white'; } ?>">
+        <?php the_title(); ?>
+      </h1>
       <?php if ( $lead ) : ?>
       <p class="p-article_lead <?php if ( $color_two ) { echo 'p-article_lead--white'; } ?>">
         <?php echo $lead; ?>
@@ -41,19 +41,52 @@ $lead      = get_post_meta($post->ID, "lead", true);
     <?php endif; ?>
   </header>
 
+<!-- is album -->
+
+<?php elseif ( $is_album ) : ?>
+
+  <header class="js-article-header | p-article_header"
+    <?php
+      if ( $color_two ) {
+        echo 'style="background: linear-gradient(179deg, ' . '#' . $color_two . ', ' . adjustBrightness($color_two, 20) . ')"';
+      }
+    ?>>
+    <div class="p-article_wrap p-article_wrap--cover">
+      <div class="b-cover | p-article_cover" style="background: url('<? $path = get_the_post_thumbnail_url(null, 'bg'); echo 'data:image/' . pathinfo($path, PATHINFO_EXTENSION) . ';base64,' . base64_encode(file_get_contents($path)); ?>') no-repeat; background-size: cover;">
+        <div class="b-cover_holder">
+          <?php the_post_thumbnail(); ?>
+        </div>
+      </div>
+      <div class="p-article_aside">
+        <div class="p-article_meta">
+          <time class="p-article_date p-article_date--white" datetime="<?php echo get_the_date('Y-m-d'); ?>">
+            <?php echo dateToRussian(get_the_date('j F Y')); ?>
+          </time>
+          <?php the_category(' '); ?>
+        </div>
+        <h1 class="p-article_title p-article_title--white">
+          <?php the_title(); ?>
+        </h1>
+        <?php echo $summary ?>
+      </div>
+    </div>
+  </header>
+
+<!-- is default -->
+
 <?php else : ?>
 
   <header class="js-article-header | p-article_header">
     <div class="p-article_wrap">
-      <h1 class="p-article_title">
-        <?php the_title(); ?>
-      </h1>
       <div class="p-article_meta">
         <time class="p-article_date" datetime="<?php echo get_the_date('Y-m-d'); ?>">
           <?php echo dateToRussian(get_the_date('j F Y')); ?>
         </time>
         <?php the_category(' '); ?>
       </div>
+      <h1 class="p-article_title">
+        <?php the_title(); ?>
+      </h1>
       <?php if ( $lead ) : ?>
       <p class="p-article_lead">
         <?php echo $lead; ?>

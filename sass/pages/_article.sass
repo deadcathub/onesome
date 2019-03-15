@@ -48,8 +48,8 @@
   &_header
     background-repeat: no-repeat
     background-position: center
-    padding: 170px 50px 0
-    margin: 0 -50px 80px
+    padding: 150px 50px 70px
+    margin: 0 -50px 70px
     position: relative
 
     @media only screen and (max-width: 800px)
@@ -59,12 +59,9 @@
       padding-right: 30px
 
     @media only screen and (max-width: 700px)
-      margin-left: -15px
-      margin-right: -15px
-      padding: 70px 15px 0
-
-    &--color
-      padding-bottom: 75px
+      margin-left: -20px
+      margin-right: -20px
+      padding: 70px 20px 0
 
   &_wrap
     max-width: $art-cnt-width
@@ -72,22 +69,26 @@
     margin-left: auto
     margin-right: auto
 
+    &--cover
+      max-width: 1300px
+      display: flex
+      align-items: flex-start
+
+  &_cover
+    margin-right: 70px
+    flex: 0 0 500px
+
+  &_aside
+
   &_meta
     margin-bottom: 30px
-
-  &_date
-    font-size: $font-stack-fs
-    margin-right: .7em
-
-    &--white
-      color: white
 
   &_title
     font-size: $font-stack-bold-fs-8
     line-height: $font-stack-bold-lh-m
     font-weight: $font-stack-bold-fw
     color: #2d2d2d
-    padding-right: 200px
+    padding-right: 150px
     margin: 0 auto 30px
 
     @media only screen and (max-width: 600px)
@@ -104,12 +105,33 @@
     &--white
       color: white
 
+
+  &_section
+    font-size: $font-stack-med-fs-2
+    font-weight: $font-stack-med-fw
+    text-transform: lowercase
+    color: $color-black
+
+    &--white
+      color: white
+      transition: color .2s ease
+
+      &:hover
+        color: rgba(255, 255, 255, .7)
+
+  &_date
+    font-size: $font-stack-fs
+    margin-right: .7em
+
+    &--white
+      color: white
+
   &_lead
     font-size: $font-stack-fs-5
     line-height: $font-stack-lh-l
     color: #121212
     padding-right: 200px
-    margin: 0 auto
+    margin: 32px auto 0
 
     @media only screen and (max-width: 1100px)
       padding-right: 15%

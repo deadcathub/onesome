@@ -89,18 +89,16 @@ remove_filter ('the_content', 'wptexturize');
 // post sections links modification
 function snip_category_rel( $result ) {
   global $post;
-  $color_one = get_post_meta($post->ID, "color-one", true);
-  $repeat = get_post_meta($post->ID, "repeat", true);
-  if ( $color_one ) {
-    if ( is_single() && $repeat ) {
-      $result = str_replace('rel="category tag"', 'class="b-post_section b-post_section--white"', $result);
-    } else if ( is_single() && !$repeat ) {
-      $result = str_replace('rel="category tag"', 'class="b-post_section"', $result);
+  $color_two = get_post_meta($post->ID, "color-two", true);
+  // $repeat = get_post_meta($post->ID, "repeat", true);
+  if ( $color_two ) {
+    if ( is_single() ) {
+      $result = str_replace('rel="category tag"', 'class="p-article_section p-article_section--white"', $result);
     } else {
-      $result = str_replace('rel="category tag"', 'class="b-post_section b-post_section--white"', $result);
+      $result = str_replace('rel="category tag"', 'class="p-article_section p-article_section--white"', $result);
     }
   } else {
-    $result = str_replace('rel="category tag"', 'class="b-post_section"', $result);
+    $result = str_replace('rel="category tag"', 'class="p-article_section"', $result);
   }
   return $result;
 }
