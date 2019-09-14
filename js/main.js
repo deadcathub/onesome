@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
   var body = $('body'),
       pageWrapper = $('.js-page-wrapper');
 
